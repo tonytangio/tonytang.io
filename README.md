@@ -2,7 +2,7 @@
 
 Tony Tang's Portfolio Website
 
-@Mysterise (Tony Zichao Tang)
+[@Mysterise](https://github.com/Mysterise) (Tony Zichao Tang)
 
 ## Tech
 
