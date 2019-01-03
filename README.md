@@ -11,3 +11,7 @@ Tony Tang's Portfolio Website
 
 [react]: https://github.com/facebook/create-react-app
 [material-ui]: https://github.com/mui-org/material-ui
+
+### Resources
+
+- [Deploying a React App on DigitalOcean](https://hackernoon.com/start-to-finish-deploying-a-react-app-on-digitalocean-bcfae9e6d01b)

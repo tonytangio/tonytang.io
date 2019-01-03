@@ -2,6 +2,11 @@
   font-family: "Roboto";
 }
 
+a {
+  /* a href links would otherwise get an odd purple underline */
+  text-decoration: none;
+}
+
 #vertical-separator {
   background: #fc00ff;
   min-width: 2px;
