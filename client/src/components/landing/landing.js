@@ -31,7 +31,6 @@ class Landing extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {/* <img src="./icons/github-icon.svg" alt="Github Profile" /> */}
                   <SVG src={GithubIcon} className="svg-3vw" />
                 </a>
                 <a
