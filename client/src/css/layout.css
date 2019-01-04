@@ -10,7 +10,7 @@ a {
 #vertical-separator {
   background: #fc00ff;
   min-width: 2px;
-  margin: 0px 20px;
+  margin: 0px 1vmax;
 }
 
 .landing {
@@ -20,7 +20,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
 }
 
 .landing-details-role {
@@ -84,8 +84,9 @@ a {
 #landing-statement {
   display: flex;
   flex-direction: row;
+  margin-right: 5vmax;
 }
-.svg-3vw > svg {
-  width: 3vw;
-  height: 3vw;
+.svg-link > svg {
+  width: 3vmax;
+  height: 3vmax;
 }

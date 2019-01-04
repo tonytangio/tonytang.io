@@ -10,7 +10,9 @@ class Landing extends Component {
     return (
       <div className="landing">
         <div className="landing-main-container">
-          <div className="landing-greeting">Hi, I'm</div>
+          <div className="landing-greeting">
+            <span>Hi, I'm</span>
+          </div>
           <div className="landing-content">
             <div className="landing-name-box">
               <div className="landing-name">Tony Tang</div>
@@ -31,14 +33,14 @@ class Landing extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <SVG src={GithubIcon} className="svg-3vw" />
+                  <SVG src={GithubIcon} className="svg-link" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/tonyztang/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <SVG src={LinkedInIcon} className="svg-3vw" />
+                  <SVG src={LinkedInIcon} className="svg-link" />
                 </a>
               </div>
             </div>
