@@ -31,14 +31,14 @@ class Landing extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <SVG src={GithubIcon} className="svg-3vw" />
+                  <SVG src={GithubIcon} className="svg-link" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/tonyztang/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <SVG src={LinkedInIcon} className="svg-3vw" />
+                  <SVG src={LinkedInIcon} className="svg-link" />
                 </a>
               </div>
             </div>
