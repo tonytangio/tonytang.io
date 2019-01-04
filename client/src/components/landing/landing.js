@@ -10,7 +10,9 @@ class Landing extends Component {
     return (
       <div className="landing">
         <div className="landing-main-container">
-          <div className="landing-greeting">Hi, I'm</div>
+          <div className="landing-greeting">
+            <span>Hi, I'm</span>
+          </div>
           <div className="landing-content">
             <div className="landing-name-box">
               <div className="landing-name">Tony Tang</div>

@@ -10,7 +10,7 @@ a {
 #vertical-separator {
   background: #fc00ff;
   min-width: 2px;
-  margin: 0px 20px;
+  margin: 0px 1vmax;
 }
 
 .landing {
@@ -84,6 +84,7 @@ a {
 #landing-statement {
   display: flex;
   flex-direction: row;
+  margin-right: 5vmax;
 }
 .svg-link > svg {
   width: 3vmax;
