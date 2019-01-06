@@ -1,0 +1,92 @@
+#root {
+  font-family: "Roboto";
+}
+
+a {
+  /* a href links would otherwise get an odd purple underline */
+  text-decoration: none;
+}
+
+#vertical-separator {
+  background: #fc00ff;
+  min-width: 2px;
+  margin: 0px 1vmax;
+}
+
+#landing {
+  text-align: left;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 2vmin);
+}
+
+.landing-details-role {
+  margin-bottom: 5px;
+}
+
+.landing-main-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(16px + 6vmin);
+}
+
+.landing-greeting {
+  font-size: calc(16px + 6vmin);
+  justify-content: flex-start;
+}
+
+.landing-content {
+  /* margin-top: calc(16px + 6vmin); */
+  /* margin-left: 15px; */
+}
+
+.landing-name-box {
+  /* Gradient */
+  background: #fc00ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #00dbde,
+    #fc00ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: row;
+  min-width: 60vw;
+}
+.landing-name {
+  color: white;
+  font-size: calc(18px + 8vmin);
+  padding: 10px;
+  align-self: flex-start;
+  padding-left: 30px;
+}
+.landing-details {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 40px;
+}
+.landing-details-roles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+#landing-links {
+  min-width: 50px;
+  min-height: 50px;
+}
+#landing-statement {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5vmax;
+}
+.svg-link > svg {
+  width: 3vmax;
+  height: 3vmax;
+}
