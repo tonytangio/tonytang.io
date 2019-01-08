@@ -1,6 +1,6 @@
 # tonytang.io
 
-Tony Tang's Portfolio Website
+Tony Tang's Personal Website
 
 [@Mysterise](https://github.com/Mysterise) (Tony Zichao Tang)
 
