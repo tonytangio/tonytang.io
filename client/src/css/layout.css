@@ -1,7 +1,13 @@
-#root {
+html {
   font-family: "Roboto";
+  font-size: 50%;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+}
 a {
   /* a > href links would otherwise get an odd purple underline */
   text-decoration: none;
@@ -14,17 +20,16 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(5px + 2vmin);
 }
 
 #landing > #main-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: calc(16px + 6vmin);
+  padding-bottom: 5vh;
 }
 
 #main-container > #greeting {
-  font-size: calc(16px + 6vmin);
+  font-size: 300%;
   justify-content: flex-start;
 }
 
@@ -36,7 +41,6 @@ a {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #00dbde, #ea00ff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   color: white;
   display: flex;
   flex-direction: row;
@@ -45,26 +49,43 @@ a {
 }
 
 #banner > #name {
-  font-size: calc(18px + 8vmin);
-  padding: 10px;
+  font-size: 500%;
   align-self: flex-start;
-  padding-left: 30px;
+  padding: 5px 15px 5px 15px;
 }
 
+@media screen and (min-width: 768px) {
+  #banner > #name {
+    padding: 10px 30px 10px 30px;
+  }
+}
 #banner > #statement {
+  font-size: 125%;
   display: flex;
   flex-direction: row;
-  margin-right: 2vmax;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 10px 10px 10px 10px;
 }
 
+@media screen and (min-width: 768px) {
+  #banner > #statement {
+    margin-right: 2vmax;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
 #statement > #vertical-separator {
   background: #ffffff;
-  min-width: 2px;
-  margin: 0px 1vmax;
+  min-width: 1px;
+  margin: 0px 0.8vmax;
 }
 
+@media screen and (min-width: 768px) {
+  #statement > #vertical-separator {
+    background: #ffffff;
+    min-width: 2px;
+    margin: 0px 1vmax;
+  }
+}
 #statement > #roles {
   display: flex;
   flex-direction: column;
@@ -72,24 +93,29 @@ a {
 }
 
 /* #roles > .role {
-  margin-bottom: 5px;
-} */
-
+    margin-bottom: 5px;
+  } */
 #main-container > #under-banner {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-
-  margin-top: 15px;
+  margin-top: 7px;
   padding-left: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  #main-container > #under-banner {
+    margin-top: 15px;
+  }
+}
 #under-banner > #links {
   min-width: 50px;
   min-height: 50px;
 }
 
 .svg-link > svg {
-  width: 3vmax;
-  height: 3vmax;
+  width: 5vmin;
+  height: 5vmin;
 }
+
+/*# sourceMappingURL=layout.css.map */
