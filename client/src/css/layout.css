@@ -1,5 +1,6 @@
-#root {
+html {
   font-family: "Roboto";
+  font-size: 100%;
 }
 
 a {
@@ -14,17 +15,16 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(5px + 2vmin);
 }
 
 #landing > #main-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: calc(16px + 6vmin);
+  padding-bottom: 5vh;
 }
 
 #main-container > #greeting {
-  font-size: calc(16px + 6vmin);
+  font-size: 300%;
   justify-content: flex-start;
 }
 
@@ -36,7 +36,6 @@ a {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #00dbde, #ea00ff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   color: white;
   display: flex;
   flex-direction: row;
@@ -45,13 +44,14 @@ a {
 }
 
 #banner > #name {
-  font-size: calc(18px + 8vmin);
+  font-size: 500%;
   padding: 10px;
   align-self: flex-start;
   padding-left: 30px;
 }
 
 #banner > #statement {
+  font-size: 125%;
   display: flex;
   flex-direction: row;
   margin-right: 2vmax;
@@ -72,14 +72,12 @@ a {
 }
 
 /* #roles > .role {
-  margin-bottom: 5px;
-} */
-
+    margin-bottom: 5px;
+  } */
 #main-container > #under-banner {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-
   margin-top: 15px;
   padding-left: 40px;
 }
@@ -90,6 +88,8 @@ a {
 }
 
 .svg-link > svg {
-  width: 3vmax;
-  height: 3vmax;
+  width: 5vmin;
+  height: 5vmin;
 }
+
+/*# sourceMappingURL=layout.css.map */
