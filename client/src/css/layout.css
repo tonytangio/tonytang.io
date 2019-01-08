@@ -1,8 +1,13 @@
 html {
   font-family: "Roboto";
-  font-size: 100%;
+  font-size: 50%;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+}
 a {
   /* a > href links would otherwise get an odd purple underline */
   text-decoration: none;
@@ -45,26 +50,42 @@ a {
 
 #banner > #name {
   font-size: 500%;
-  padding: 10px;
   align-self: flex-start;
-  padding-left: 30px;
+  padding: 5px 15px 5px 15px;
 }
 
+@media screen and (min-width: 768px) {
+  #banner > #name {
+    padding: 10px 30px 10px 30px;
+  }
+}
 #banner > #statement {
   font-size: 125%;
   display: flex;
   flex-direction: row;
-  margin-right: 2vmax;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 10px 10px 10px 10px;
 }
 
+@media screen and (min-width: 768px) {
+  #banner > #statement {
+    margin-right: 2vmax;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
 #statement > #vertical-separator {
   background: #ffffff;
-  min-width: 2px;
-  margin: 0px 1vmax;
+  min-width: 1px;
+  margin: 0px 0.8vmax;
 }
 
+@media screen and (min-width: 768px) {
+  #statement > #vertical-separator {
+    background: #ffffff;
+    min-width: 2px;
+    margin: 0px 1vmax;
+  }
+}
 #statement > #roles {
   display: flex;
   flex-direction: column;
@@ -78,10 +99,15 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: 15px;
+  margin-top: 7px;
   padding-left: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  #main-container > #under-banner {
+    margin-top: 15px;
+  }
+}
 #under-banner > #links {
   min-width: 50px;
   min-height: 50px;
