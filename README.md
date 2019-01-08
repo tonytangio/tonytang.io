@@ -1,6 +1,6 @@
 # tonytang.io
 
-Tony Tang's Portfolio Website
+Tony Tang's Personal Website
 
 [@Mysterise](https://github.com/Mysterise) (Tony Zichao Tang)
 
@@ -8,10 +8,12 @@ Tony Tang's Portfolio Website
 
 - [React]
 - [Material-UI]
+- [Sass]
 
 [react]: https://github.com/facebook/create-react-app
 [material-ui]: https://github.com/mui-org/material-ui
+[sass]: https://sass-lang.com
 
-### Resources
+## Resources
 
 - [Deploying a React App on DigitalOcean](https://hackernoon.com/start-to-finish-deploying-a-react-app-on-digitalocean-bcfae9e6d01b)
