@@ -33,16 +33,17 @@ class Landing extends Component {
                 <SVG src={GithubIcon} className="svg-link" />
               </a>
               <a
-                href="https://www.linkedin.com/in/tonyztang/"
+                href="https://www.linkedin.com/in/tonytangio/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ "padding-left": "5px" }}
               >
                 <SVG src={LinkedInIcon} className="svg-link" />
               </a>
             </div>
           </div>
         </div>
-      </header>
+      </header >
     );
   }
 }
