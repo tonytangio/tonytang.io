@@ -4,6 +4,7 @@ import SVG from "react-inlinesvg";
 // import Icon from "@material-ui/core/Icon";
 import GithubIcon from "./icons/github-icon.svg";
 import LinkedInIcon from "./icons/linkedin-icon.svg";
+import EmailIcon from "./icons/email-icon.svg";
 
 class Landing extends Component {
   render() {
@@ -39,6 +40,12 @@ class Landing extends Component {
                 style={{ "padding-left": "5px" }}
               >
                 <SVG src={LinkedInIcon} className="svg-link" />
+              </a>
+              <a
+                href="mailto:tonytang.dev@gmail.com"
+                style={{ "padding-left": "5px" }}
+              >
+                <SVG src={EmailIcon} className="svg-link" />
               </a>
             </div>
           </div>
