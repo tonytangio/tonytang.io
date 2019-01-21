@@ -15,8 +15,8 @@ Tony Tang's Personal Website
 [react]: https://github.com/facebook/create-react-app
 [material-ui]: https://github.com/mui-org/material-ui
 [sass]: https://sass-lang.com
-[Node.js]: https://nodejs.org/en/
-[DigitalOcean]: https://digitalocean.com
+[node.js]: https://nodejs.org/en/
+[digitalocean]: https://digitalocean.com
 
 ## Resources
 
