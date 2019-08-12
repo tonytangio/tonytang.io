@@ -50,7 +50,7 @@ class Landing extends Component {
             </div>
           </div>
         </div>
-      </header >
+      </header>
     );
   }
 }
