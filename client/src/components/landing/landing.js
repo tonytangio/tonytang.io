@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-// import GithubIcon from "../public/images/github-icon.svg";
-import SVG from "react-inlinesvg";
-// import Icon from "@material-ui/core/Icon";
+
+import SVGLink from "./SVGLink.js";
+
 import GithubIcon from "./icons/github-icon.svg";
 import LinkedInIcon from "./icons/linkedin-icon.svg";
 import EmailIcon from "./icons/email-icon.svg";
-
-import SVGLink from "./SVGLink.js";
 
 class Landing extends Component {
   render() {
