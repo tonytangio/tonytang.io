@@ -42,21 +42,37 @@ const Banner = styled.div`
 const Name = styled.div`
   font-size: 500%;
   align-self: flex-start;
-  padding: 5px 15px 5px 15px;
+  padding-left: 30px;
+  padding-bottom: 10px;
 `;
 
 const Description = styled.div`
   font-size: 125%;
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  padding: 20px 30px;
+`;
+
+const VerticalSeparator = styled.div`
+  background: #ffffff;
+  min-width: 2px;
+  margin: 0px 1vmax;
+`;
+
+const Roles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Links = styled.div`
-  margin-top: 7px;
-  padding-left: 40px;
+  margin-top: 10px;
 
   align-self: flex-end;
+
+  & > * {
+    margin-left: 10px;
+  }
 `;
 
 const Landing: React.FC = () => {
@@ -67,12 +83,12 @@ const Landing: React.FC = () => {
         <Name>Tony Tang</Name>
         <Description>
           <div>Sydney</div>
-          <div id="vertical-separator" />
-          <div id="roles">
+          <VerticalSeparator />
+          <Roles>
             <div className="role">Software Engineer</div>
             <div className="role">Designer</div>
             <div className="role">Leader</div>
-          </div>
+          </Roles>
         </Description>
       </Banner>
       <Links>
