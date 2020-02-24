@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Landing from "./components/landing/landing";
+import Landing from "./landing/landing";
 
 const StyledApp = styled.div`
   /* Span app across entire page */
