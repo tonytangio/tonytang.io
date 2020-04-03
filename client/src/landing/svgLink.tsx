@@ -1,10 +1,19 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
-const SvgImg = styled.img`
+const SvgImg = styled.img`  
   width: 5vmin;
   height: 5vmin;
+  border-radius: 50%;
+  
+  transition: transform .5s ease;
+  
+  &:hover {
+    transform: scale(1.5);
+  }
 `;
+
+
 
 interface SVGLinkProps {
   href: string;

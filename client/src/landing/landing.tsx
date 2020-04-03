@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import EmailSVG from './icons/email-icon.svg';
+import GithubSVG from './icons/github-icon.svg';
+import LinkedInSVG from './icons/linkedin-icon.svg';
+import React from 'react';
+import styled from 'styled-components';
+import SvgLink from './svgLink';
 
-import SvgLink from "./svgLink";
-import GithubSVG from "./icons/github-icon.svg";
-import LinkedInSVG from "./icons/linkedin-icon.svg";
-import EmailSVG from "./icons/email-icon.svg";
 
 const StyledLanding = styled.div`
   /* Flexbox */
@@ -66,12 +66,12 @@ const Roles = styled.div`
 `;
 
 const Links = styled.div`
-  margin-top: 10px;
+  margin-top: 15px;
 
   align-self: flex-end;
 
   & > * {
-    margin-left: 10px;
+    margin-left: 15px;
   }
 `;
 
