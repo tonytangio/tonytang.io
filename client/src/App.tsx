@@ -1,15 +1,13 @@
 import Landing from './landing/landing';
-import Navbar from './navbar/navbar';
+import Navbar from './navbar';
 import React from 'react';
 import styled from 'styled-components';
 import {
   BrowserRouter as Router,
-  Link,
   Route,
-  Switch
+  Switch,
   } from 'react-router-dom';
 
-  
 
 const StyledApp = styled.div`
   /* Span app across entire page */
@@ -31,22 +29,22 @@ const StyledApp = styled.div`
   text-align: center;
 `;
 
-const Links = styled.div`
-  margin-top: 15px;
-
-  align-self: flex-end;
-
-  & > * {
-    margin-left: 15px;
-  }
-`;
-
 const App: React.FC = () => {
   return (
     <StyledApp>
       <Router>
         <Landing />
         <Navbar />
+        <Switch>
+          <Route path='/login'>
+            <h1>Login</h1>
+            To be added
+          </Route>
+          <Route path='/secret'>
+            hunter2
+          </Route>
+          <Route path='/'></Route>
+        </Switch>
       </Router>
     </StyledApp>
   );

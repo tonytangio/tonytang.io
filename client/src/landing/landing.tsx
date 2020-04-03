@@ -9,6 +9,8 @@ const StyledLanding = styled.div`
   align-items: center;
 
   text-align: left;
+
+  transition: all 1s ease;
 `;
 
 const Greeting = styled.div`

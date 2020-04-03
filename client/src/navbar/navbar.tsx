@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import SvgLink from './svgLink';
+import SvgLink from '../components/svgLink';
+import { Link } from 'react-router-dom';
 
 const StyledNavbar = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    left: 0;
+    top: 0;
+    transition: all 1s ease-in-out;
 `;
 
 const PageLinks = styled.div`
@@ -28,8 +33,8 @@ const Navbar: React.FC = () => {
     return (
         <StyledNavbar>
             <PageLinks>
-                {/* <h2>Hello</h2>
-                <h2>Login</h2> */}
+                <Link to='/'>Home</Link>
+                <Link to='/login'>Login</Link>
             </PageLinks>
             <ContactLinks>
                 <SvgLink href="https://github.com/Mysterise" SVGPath='/icons/github-icon.svg' />
