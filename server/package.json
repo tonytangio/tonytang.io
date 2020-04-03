@@ -5,7 +5,8 @@
   "main": "app.ts",
   "scripts": {
     "build": "tsc -p .",
-    "watch": "ts-node-dev app.ts"
+    "start": "pm2 start dist/server.js",
+    "watch": "ts-node-dev src/server.ts"
   },
   "author": "@Mysterise (Tony Zichao Tang)",
   "license": "ISC",
