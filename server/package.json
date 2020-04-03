@@ -4,9 +4,11 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
+    "watch": "ts-node-dev src/server.ts",
     "build": "tsc -p .",
     "start": "pm2 start dist/server.js",
-    "watch": "ts-node-dev src/server.ts"
+    "stop": "pm2 stop server",
+    "restart": "pm2 restart server"
   },
   "author": "@Mysterise (Tony Zichao Tang)",
   "license": "ISC",
