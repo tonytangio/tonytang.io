@@ -1,13 +1,22 @@
-import React from "react";
-import styled from "styled-components";
+import Landing from './landing/landing';
+import Navbar from './navbar/navbar';
+import React from 'react';
+import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch
+  } from 'react-router-dom';
 
-import Landing from "./landing/landing";
+  
 
 const StyledApp = styled.div`
   /* Span app across entire page */
   box-sizing: border-box;
   height: 100vh;
-  width: 100vw;
+  width: 60vw;
+  margin: auto;
 
   /* Colours */
   background-color: #ffffff;
@@ -22,10 +31,23 @@ const StyledApp = styled.div`
   text-align: center;
 `;
 
+const Links = styled.div`
+  margin-top: 15px;
+
+  align-self: flex-end;
+
+  & > * {
+    margin-left: 15px;
+  }
+`;
+
 const App: React.FC = () => {
   return (
     <StyledApp>
-      <Landing />
+      <Router>
+        <Landing />
+        <Navbar />
+      </Router>
     </StyledApp>
   );
 };

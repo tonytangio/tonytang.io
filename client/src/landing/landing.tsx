@@ -1,10 +1,5 @@
-import EmailSVG from './icons/email-icon.svg';
-import GithubSVG from './icons/github-icon.svg';
-import LinkedInSVG from './icons/linkedin-icon.svg';
 import React from 'react';
 import styled from 'styled-components';
-import SvgLink from './svgLink';
-
 
 const StyledLanding = styled.div`
   /* Flexbox */
@@ -65,16 +60,6 @@ const Roles = styled.div`
   justify-content: flex-start;
 `;
 
-const Links = styled.div`
-  margin-top: 15px;
-
-  align-self: flex-end;
-
-  & > * {
-    margin-left: 15px;
-  }
-`;
-
 const Landing: React.FC = () => {
   return (
     <StyledLanding>
@@ -86,19 +71,11 @@ const Landing: React.FC = () => {
           <VerticalSeparator />
           <Roles>
             <div className="role">Software Engineer</div>
-            <div className="role">Designer</div>
-            <div className="role">Leader</div>
+            <div className="role">Video Gamer</div>
+            <div className="role">Dumber</div>
           </Roles>
         </Description>
       </Banner>
-      <Links>
-        <SvgLink href="https://github.com/Mysterise" SVGPath={GithubSVG} />
-        <SvgLink
-          href="https://www.linkedin.com/in/tonytangio/"
-          SVGPath={LinkedInSVG}
-        />
-        <SvgLink href="mailto:tonytang.dev@gmail.com" SVGPath={EmailSVG} />
-      </Links>
     </StyledLanding>
   );
 };

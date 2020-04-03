@@ -1,23 +1,11 @@
 # tonytang.io
 
-Tony Tang's Personal Website
-
-[@Mysterise](https://github.com/Mysterise) (Tony Zichao Tang)
+Home of [@Mysterise](https://github.com/Mysterise) (Tony Zichao Tang)
 
 ## Tech
 
+- [TypeScript]
 - [React]
-- [Material-UI]
-- [Sass]
 - [Node.js]
+- [Express]
 - [DigitalOcean]
-
-[react]: https://github.com/facebook/create-react-app
-[material-ui]: https://github.com/mui-org/material-ui
-[sass]: https://sass-lang.com
-[node.js]: https://nodejs.org/en/
-[digitalocean]: https://digitalocean.com
-
-## Resources
-
-- [Deploying a React App on DigitalOcean](https://hackernoon.com/start-to-finish-deploying-a-react-app-on-digitalocean-bcfae9e6d01b)
