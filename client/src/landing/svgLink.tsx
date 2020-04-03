@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 const SvgImg = styled.img`  
   width: 5vmin;
@@ -12,8 +12,6 @@ const SvgImg = styled.img`
     transform: scale(1.5);
   }
 `;
-
-
 
 interface SVGLinkProps {
   href: string;
