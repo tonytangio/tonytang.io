@@ -1,13 +1,14 @@
-import Landing from './landing/landing';
+import Landing from './landing';
+import Login from './login';
 import Navbar from './navbar';
 import React from 'react';
+import Signup from './signup';
 import styled from 'styled-components';
 import {
   HashRouter as Router,
   Route,
   Switch,
   } from 'react-router-dom';
-
 
 const StyledApp = styled.div`
   /* Span app across entire page */
@@ -36,10 +37,8 @@ const App: React.FC = () => {
         <Landing />
         <Navbar />
         <Switch>
-          <Route path='/login'>
-            <h1>Login</h1>
-            To be added
-          </Route>
+          <Route path='/login' component={Login}/>
+          <Route path='/signup' component={Signup}/>
           <Route path='/secret'>
             hunter2
           </Route>

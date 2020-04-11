@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SvgLink from '../components/svgLink';
 import { Link } from 'react-router-dom';
+import { Tabs } from '@material-ui/core';
 
 const StyledNavbar = styled.div`
     width: 100%;
@@ -35,6 +36,7 @@ const Navbar: React.FC = () => {
             <PageLinks>
                 <Link to='/'>Home</Link>
                 <Link to='/login'>Login</Link>
+                <Link to='/signup'>Signup</Link>
             </PageLinks>
             <ContactLinks>
                 <SvgLink href="https://github.com/Mysterise" SVGPath='/icons/github-icon.svg' />
