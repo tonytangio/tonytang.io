@@ -1,8 +1,8 @@
-import Landing from './landing';
-import Login from './login';
-import Navbar from './navbar';
+import Landing from './components/landing';
+import Login from './components/login';
+import Navbar from './components/navbar';
 import React from 'react';
-import Signup from './signup';
+import Signup from './components/signup';
 import styled from 'styled-components';
 import {
   HashRouter as Router,
@@ -37,12 +37,12 @@ const App: React.FC = () => {
         <Landing />
         <Navbar />
         <Switch>
-          <Route path='/login' component={Login}/>
-          <Route path='/signup' component={Signup}/>
-          <Route path='/secret'>
+          <Route exact path='/login' component={Login}/>
+          <Route exact path='/signup' component={Signup}/>
+          <Route exact path='/secret'>
             hunter2
           </Route>
-          <Route path='/'></Route>
+          <Route exact path='/'></Route>
         </Switch>
       </Router>
     </StyledApp>
