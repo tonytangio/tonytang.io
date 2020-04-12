@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SvgLink from '../common/svgLink';
+import SvgLink from '../common/SvgLink';
 import { Link } from 'react-router-dom';
 
 const StyledNavbar = styled.div`

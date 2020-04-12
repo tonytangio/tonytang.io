@@ -21,6 +21,7 @@ db.once('open', () => console.log(`Connection established to MongoDB: ${connecti
 
 server.use(bodyParser.urlencoded());
 server.use(bodyParser.json());
+
 server.use(passport.initialize());
 configPassport(passport);
 
@@ -28,6 +29,9 @@ server.use(express.static(path.join(__dirname, '../../client/build')));
 
 
 server.get('/', (req, res) => res.sendFile(path.join(__dirname, '../client/build', 'index.html')));
+server.get('/api/secret', (req, res) => {
+  res.send('haa');
+});
 server.post('/api/signup', signupController);
 server.post('/api/login', loginController);
 

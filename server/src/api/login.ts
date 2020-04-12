@@ -32,6 +32,7 @@ const loginController = async (req: Request, res: Response) => {
   }, (error, token) => {
     return res.json({
       success: true,
+      username: user.username,
       token: 'Bearer ' + token
     });
   });

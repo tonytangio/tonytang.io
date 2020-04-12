@@ -13,12 +13,12 @@ const SvgImg = styled.img`
   }
 `;
 
-interface SVGLinkProps {
+interface SvgLinkProps {
   href: string;
   SVGPath: string;
 }
 
-const SVGLink: React.FC<SVGLinkProps> = props => {
+const SvgLink: React.FC<SvgLinkProps> = props => {
   return (
     <a href={props.href} target="_blank" rel="noopener noreferrer">
       <SvgImg src={props.SVGPath} />
@@ -26,4 +26,4 @@ const SVGLink: React.FC<SVGLinkProps> = props => {
   );
 };
 
-export default SVGLink;
+export default SvgLink;

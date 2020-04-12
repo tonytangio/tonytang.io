@@ -2,7 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from 'react';
 import styled from 'styled-components';
 import { TextField, Button } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
-import axios from 'axios';
+import {loginUser} from '../../services/auth'
 
 const StyledLogin = styled.div`
     width: 100%;
@@ -40,15 +40,14 @@ const Login: React.FC = () => {
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const loginUser = {
+        const user = {
             username: state.username,
             password: state.password
         };
 
         try {
-            const response = await axios.post('api/login', loginUser);
+            const response = await loginUser(user);
             console.log(JSON.stringify(response));
-            const { token } = response.data;
         } catch (error) {
             console.log(`Error obj: ${JSON.stringify(error)}`);
             setState(prevState => ({

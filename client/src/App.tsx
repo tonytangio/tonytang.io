@@ -4,11 +4,13 @@ import Navbar from './components/navbar';
 import React from 'react';
 import Signup from './components/signup';
 import styled from 'styled-components';
+import Secret from './components/secret'
 import {
   HashRouter as Router,
   Route,
   Switch,
   } from 'react-router-dom';
+import { PrivateRoute } from './components/common/PrivateRoute';
 
 const StyledApp = styled.div`
   /* Span app across entire page */
@@ -37,11 +39,10 @@ const App: React.FC = () => {
         <Landing />
         <Navbar />
         <Switch>
+          <PrivateRoute exact path = '/post' component={Signup}/>
+          <PrivateRoute exact path='/secret' component={Secret}/>
           <Route exact path='/login' component={Login}/>
           <Route exact path='/signup' component={Signup}/>
-          <Route exact path='/secret'>
-            hunter2
-          </Route>
           <Route exact path='/'></Route>
         </Switch>
       </Router>

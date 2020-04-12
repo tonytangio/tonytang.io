@@ -2,7 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from 'react';
 import styled from 'styled-components';
 import { TextField, Button, CircularProgress, Container } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
-import axios from 'axios';
+import { signupUser } from '../../services/auth';
 import { useHistory } from 'react-router';
 
 const StyledLogin = styled.div`
@@ -49,10 +49,10 @@ const Signup: React.FC = () => {
         };
 
         try {
-            const success = await axios.post('api/signup', newUser);
+            const response = await signupUser(newUser); 
             setState(prevState => ({
                 ...prevState,
-                success: success.data
+                success: response.data
             }));
             setTimeout(() => history.push('/login'), 2000);
             
