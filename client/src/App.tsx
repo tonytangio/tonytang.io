@@ -43,7 +43,7 @@ const App: React.FC = () => {
           <PrivateRoute exact path='/secret' component={Secret}/>
           <Route exact path='/login' component={Login}/>
           <Route exact path='/signup' component={Signup}/>
-          <Route exact path='/'></Route>
+          <Route path='/'></Route>
         </Switch>
       </Router>
     </StyledApp>

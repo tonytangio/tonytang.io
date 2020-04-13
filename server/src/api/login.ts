@@ -6,25 +6,28 @@ import keys from '../secret/keys';
 const loginController = async (req: Request, res: Response) => {
   const { username, password } = req.body;
 
+  console.log(`${JSON.stringify(req.body)}`);
   const user: User = await UserModel.findOne({
-    username
+    username,
+    password
   }) as unknown as User;
   if (!user) {
     return res.status(400).send({
-      error: 'There isn\'t a user with that username.' 
+      error: 'Incorrect login details.' 
     });
   }
+  console.log('User: ' + JSON.stringify(user));
 
-  if (password !== user.password) {
-    return res.status(400).send({
-      error: 'Incorrect password entered.' 
-    }); 
-  }
+  // if (password !== user.password) {
+  //   return res.status(400).send({
+  //     error: 'Incorrect password entered.' 
+  //   }); 
+  // }
 
   // Passwords match - user is authentic
   const payload = {
     id: user.id,
-    name: user.username
+    username: user.username
   };
 
   jwt.sign(payload, keys.jwtStrategy, {
@@ -33,7 +36,7 @@ const loginController = async (req: Request, res: Response) => {
     return res.json({
       success: true,
       username: user.username,
-      token: 'Bearer ' + token
+      token
     });
   });
 };

@@ -1,6 +1,6 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import styled from 'styled-components';
-import { TextField, Button, CircularProgress, Container } from '@material-ui/core';
+import { TextField, Button, CircularProgress } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import { signupUser } from '../../services/auth';
 import { useHistory } from 'react-router';
@@ -55,7 +55,6 @@ const Signup: React.FC = () => {
                 success: response.data
             }));
             setTimeout(() => history.push('/login'), 2000);
-            
         } catch (error) {
             console.log(`Error obj: ${JSON.stringify(error)}`);
             setState(prevState => ({
@@ -69,13 +68,15 @@ const Signup: React.FC = () => {
         <StyledLogin>
             <h1>Signup</h1>
             <StyledForm onSubmit={handleSubmit}>
-                {state.success && 
-                <>
-                    <Alert severity="success">
-                        {`${state.success} Redirecting you to Login.`}
-                    </Alert>
-                    <CircularProgress/>
-                </>}
+                {
+                    state.success && 
+                    <>
+                        <Alert severity="success">
+                            {`${state.success} Redirecting you to Login.`}
+                        </Alert>
+                        <CircularProgress/>
+                    </>
+                }
                 {state.error && <Alert severity="error">{state.error}</Alert>}
                 <TextField
                     id="username"

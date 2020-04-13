@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import SvgLink from '../common/SvgLink';
 import { Link } from 'react-router-dom';
+import { getCurrentUser, logout } from '../../services/auth';
+import { useState } from 'react';
 
 const StyledNavbar = styled.div`
     width: 100%;
@@ -30,12 +32,26 @@ const ContactLinks = styled.div`
 `;
 
 const Navbar: React.FC = () => {
+    const [currentUser, setCurrentUser] = useState(getCurrentUser());
+    console.log(currentUser);
     return (
         <StyledNavbar>
             <PageLinks>
                 <Link to='/'>Home</Link>
-                <Link to='/login'>Login</Link>
-                <Link to='/signup'>Signup</Link>
+                {
+                    currentUser ? 
+                    <> 
+                        <span>Hello, <b>{currentUser.username}</b>!</span>
+                        <Link to='/' onClick={() => {
+                            setCurrentUser(null);
+                            logout();
+                        }}>Log out</Link>
+                    </> : 
+                    <>
+                        <Link to='/login'>Login</Link>
+                        <Link to='/signup'>Signup</Link>
+                    </> 
+                }
             </PageLinks>
             <ContactLinks>
                 <SvgLink href="https://github.com/Mysterise" SVGPath='/icons/github-icon.svg' />

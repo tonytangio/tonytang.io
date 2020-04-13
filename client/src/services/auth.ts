@@ -8,10 +8,10 @@ interface User {
 const loginUser = async (user: User) => { 
     const response = await axios.post('api/login', user)
     localStorage.setItem('user', JSON.stringify(response.data));
-    return response.data;
+    return response;
 };
 
-const logout = () => localStorage.removeItem('jwtToken');
+const logout = () => localStorage.removeItem('user');
 
 const signupUser = (user: User) => axios.post('api/signup', user);
 
