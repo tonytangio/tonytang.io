@@ -6,9 +6,6 @@ import mongoose from 'mongoose';
 import path from 'path';
 import signupController from './api/signup';
 import loginController from './api/login';
-import passport from 'passport';
-import configPassport from './passport';
-import session from 'express-session';
 import { verifyToken } from './authJwt';
 import secretController from './api/secret';
 
@@ -22,17 +19,8 @@ const db = mongoose.connection;
 db.on('error', error => console.log(error));
 db.once('open', () => console.log(`Connection established to MongoDB: ${connections.mongoDb}`));
 
-server.use(bodyParser.urlencoded({
-  extended: true 
-}));
+server.use(bodyParser.urlencoded());
 server.use(bodyParser.json());
-server.use(session({
-  secret: 'secret' 
-}));
-
-server.use(passport.initialize());
-server.use(passport.session());
-configPassport(passport);
 
 server.use(express.static(path.join(__dirname, '../../client/build')));
 
