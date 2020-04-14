@@ -5,7 +5,7 @@ import axios from 'axios';
 import {getAuthHeader} from '../../services/data';
 import Alert from '@material-ui/lab/Alert';
 
-const StyledLogin = styled.div`
+const StyledSecret = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ const Secret: React.FC = () => {
                 console.log(`Secret Error obj: ${JSON.stringify(error.response)}`);
                 setState(prevState => ({
                     ...prevState,
-                    error: error.response.data.message
+                    error: error.response.data
                 }))
             }
         };
@@ -41,10 +41,10 @@ const Secret: React.FC = () => {
     }, []);
 
     return (
-        <StyledLogin>
+        <StyledSecret>
             {state.error && <Alert severity="error">{state.error}</Alert>}
             <h1>{state.secret}</h1>
-        </StyledLogin>
+        </StyledSecret>
     );
 };
 

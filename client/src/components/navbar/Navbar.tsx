@@ -46,6 +46,7 @@ const Navbar: React.FC = () => {
                             setCurrentUser(null);
                             logout();
                         }}>Log out</Link>
+                        <Link to='/newBlog'>New Blog</Link>
                     </> : 
                     <>
                         <Link to='/login'>Login</Link>

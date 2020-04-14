@@ -14,8 +14,8 @@ const signupController = async (req: Request, res: Response) => {
   }
 
   const newUser = new UserModel({
-    username: username,
-    password: password
+    username,
+    password
   });
 
   newUser.save();

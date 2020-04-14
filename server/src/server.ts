@@ -8,6 +8,8 @@ import signupController from './api/signup';
 import loginController from './api/login';
 import { verifyToken } from './authJwt';
 import secretController from './api/secret';
+import getBlogController from './api/getBlog';
+import makeBlogController from './api/makeBlog';
 
 const { port } = config;
 const server = express();
@@ -26,6 +28,8 @@ server.use(express.static(path.join(__dirname, '../../client/build')));
 
 server.get('/', (req, res) => res.sendFile(path.join(__dirname, '../client/build', 'index.html')));
 server.get('/api/secret', verifyToken, secretController);
+server.get('/api/getBlog', getBlogController);
+server.post('/api/makeBlog', makeBlogController);
 server.post('/api/signup', signupController);
 server.post('/api/login', loginController);
 
