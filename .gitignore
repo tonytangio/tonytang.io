@@ -1,3 +1,4 @@
-secret/
+secret/*
+!secret/*.example
 dist/
 node_modules/
