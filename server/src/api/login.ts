@@ -1,7 +1,7 @@
 import User, { UserModel } from '../models/User';
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import keys from '../secret/keys';
+import keys from '../../../secret/keys';
 import { validateAlphanumericString } from '../validator';
 
 const loginController = async (req: Request, res: Response) => {

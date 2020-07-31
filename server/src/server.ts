@@ -1,6 +1,6 @@
 import bodyParser from 'body-parser';
 import config from './config';
-import connections from './secret/connections';
+import connections from '../../secret/connections';
 import express from 'express';
 import mongoose from 'mongoose';
 import path from 'path';
