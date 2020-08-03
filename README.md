@@ -1,11 +1,14 @@
 # tonytang.io
 
-Home of [@Mysterise](https://github.com/Mysterise) (Tony Zichao Tang)
+Home of Tony Tang [@Mysterise](https://github.com/Mysterise)
 
-## Tech
+## Installation
 
-- [TypeScript]
-- [React]
-- [Node.js]
-- [Express]
-- [DigitalOcean]
+Setup secrets in [/secret](/secret).
+
+```
+$ cd client
+$ yarn install
+$ cd ../server
+$ yarn install
+```
