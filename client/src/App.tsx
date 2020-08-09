@@ -4,12 +4,10 @@ import Navbar from './components/navbar';
 import React from 'react';
 import Signup from './components/signup';
 import styled from 'styled-components';
-import Secret from './components/secretPage'
-import {
-  HashRouter as Router,
+import Secret from './components/secretPage';
+import { HashRouter as Router,
   Route,
-  Switch,
-  } from 'react-router-dom';
+  Switch, } from 'react-router-dom';
 import { PrivateRoute } from './components/common/PrivateRoute';
 import Blog from './components/blog';
 import NewBlog from './components/newBlog';

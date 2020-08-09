@@ -12,34 +12,36 @@ const StyledBlog = styled.div`
 `;
 
 const Blog: React.FC = () => {
-    const [state, setState] = useState({
-        title: 'No blog to show',
-        content: 'No blog to show',
-        date: ''
-    });
+  const [state, setState] = useState({
+    title: 'No blog to show',
+    content: 'No blog to show',
+    date: ''
+  });
 
-    useEffect(() => {
-        const getBlog = async() => {
-            const response = await axios.get('api/getBlog');
-            console.log(`Secret response: ${JSON.stringify(response)}`);
-            setState(prevState => ({
-                ...prevState,
-                ...response.data,
-            }));
-        };
+  useEffect(() => {
+    const getBlog = async() => {
+      const response = await axios.get('api/getBlog');
+      console.log(`Secret response: ${JSON.stringify(response)}`);
+      setState(prevState => ({
+        ...prevState,
+        ...response.data,
+      }));
+    };
         
-        getBlog();
-    }, []);
+    getBlog();
+  }, []);
 
-    return (
-        <StyledBlog>
-            <h1>Latest Blog</h1>
-            <i>{state.date}</i>
-            <h2>{state.title}</h2>
-            <div dangerouslySetInnerHTML={{__html: state.content}}/>
-            <script>alert("This doesn't actually work")</script>
-        </StyledBlog>
-    );
+  return (
+    <StyledBlog>
+      <h1>Latest Blog</h1>
+      <i>{state.date}</i>
+      <h2>{state.title}</h2>
+      <div dangerouslySetInnerHTML={{
+        __html: state.content 
+      }}/>
+      <script>alert("This doesn't actually work")</script>
+    </StyledBlog>
+  );
 };
 
 export default Blog;

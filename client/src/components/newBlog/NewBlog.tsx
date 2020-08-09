@@ -24,69 +24,69 @@ const StyledForm = styled.form`
 `;
 
 const NewBlog: React.FC = () => {
-    const [state, setState] = useState({
-        title: "",
-        content: "",
-        success: ""
-    });
-    const history = useHistory();
+  const [state, setState] = useState({
+    title: '',
+    content: '',
+    success: ''
+  });
+  const history = useHistory();
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        // https://reactjs.org/docs/events.html#event-pooling
-        event.persist(); 
-        setState(prevState => ({ 
-            ...prevState, 
-            [event.target.id]: event.target.value
-        }));
-    }
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    // https://reactjs.org/docs/events.html#event-pooling
+    event.persist(); 
+    setState(prevState => ({ 
+      ...prevState, 
+      [event.target.id]: event.target.value
+    }));
+  };
 
-    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const newPost = {
-            title: state.title,
-            content: state.content
-        };
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const newPost = {
+      title: state.title,
+      content: state.content
+    };
 
-        const response = await axios.post('api/makeBlog', newPost);
-        setState(prevState => ({
-            ...prevState,
-            success: response.data
-        }));
-        setTimeout(() => history.push('/'), 2000);
-    }
+    const response = await axios.post('api/makeBlog', newPost);
+    setState(prevState => ({
+      ...prevState,
+      success: response.data
+    }));
+    setTimeout(() => history.push('/'), 2000);
+  };
 
-    return (
-        <StyledNewBlog>
-            <h1>Write a new Blog!</h1>
-            <StyledForm onSubmit={handleSubmit}>
-                {
-                    state.success && 
-                    <>
-                        <Alert severity="success">
-                            {`${state.success} Redirecting you back to Home.`}
-                        </Alert>
-                        <CircularProgress/>
+  return (
+    <StyledNewBlog>
+      <h1>Write a new Blog!</h1>
+      <StyledForm onSubmit={handleSubmit}>
+        {
+          state.success 
+                    && <>
+                      <Alert severity="success">
+                        {`${state.success} Redirecting you back to Home.`}
+                      </Alert>
+                      <CircularProgress/>
                     </>
-                }
-                <TextField
-                    id="title"
-                    type="title"
-                    label="Title"
-                    value={state.title}
-                    onChange={handleChange}
-                />
-                <TextField
-                    multiline
-                    id="content"
-                    type="content"
-                    label="Content"
-                    value={state.content}
-                    onChange={handleChange}
-                />
-                <Button variant="contained" type="submit"> Submit Blog </Button>
-            </StyledForm>
-        </StyledNewBlog>
-    );
+        }
+        <TextField
+          id="title"
+          type="title"
+          label="Title"
+          value={state.title}
+          onChange={handleChange}
+        />
+        <TextField
+          multiline
+          id="content"
+          type="content"
+          label="Content"
+          value={state.content}
+          onChange={handleChange}
+        />
+        <Button variant="contained" type="submit"> Submit Blog </Button>
+      </StyledForm>
+    </StyledNewBlog>
+  );
 };
 
 export default NewBlog;

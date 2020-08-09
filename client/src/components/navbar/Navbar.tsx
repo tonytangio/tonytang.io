@@ -32,38 +32,38 @@ const ContactLinks = styled.div`
 `;
 
 const Navbar: React.FC = () => {
-    const [currentUser, setCurrentUser] = useState(getCurrentUser());
-    console.log(currentUser);
-    return (
-        <StyledNavbar>
-            <PageLinks>
-                <Link to='/'>Home</Link>
-                {
-                    currentUser ? 
-                    <> 
-                        <span>Hello, <b>{currentUser.username}</b>!</span>
-                        <Link to='/' onClick={() => {
-                            setCurrentUser(null);
-                            logout();
-                        }}>Log out</Link>
-                        <Link to='/newBlog'>New Blog</Link>
-                    </> : 
-                    <>
-                        <Link to='/login'>Login</Link>
-                        <Link to='/signup'>Signup</Link>
-                    </> 
-                }
-            </PageLinks>
-            <ContactLinks>
-                <SvgLink href="https://github.com/Mysterise" SVGPath='/icons/github-icon.svg' />
-                <SvgLink
-                    href="https://www.linkedin.com/in/tonytangio/"
-                    SVGPath='/icons/linkedin-icon.svg'
-                />
-                <SvgLink href="mailto:tonytang.dev@gmail.com" SVGPath='/icons/email-icon.svg' />
-            </ContactLinks>
-        </StyledNavbar>
-    );
+  const [currentUser, setCurrentUser] = useState(getCurrentUser());
+  console.log(currentUser);
+  return (
+    <StyledNavbar>
+      <PageLinks>
+        <Link to='/'>Home</Link>
+        {
+          currentUser 
+            ? <> 
+              <span>Hello, <b>{currentUser.username}</b>!</span>
+              <Link to='/' onClick={() => {
+                setCurrentUser(null);
+                logout();
+              }}>Log out</Link>
+              <Link to='/newBlog'>New Blog</Link>
+            </> 
+            : <>
+              <Link to='/login'>Login</Link>
+              <Link to='/signup'>Signup</Link>
+            </> 
+        }
+      </PageLinks>
+      <ContactLinks>
+        <SvgLink href="https://github.com/Mysterise" SVGPath='/icons/github-icon.svg' />
+        <SvgLink
+          href="https://www.linkedin.com/in/tonytangio/"
+          SVGPath='/icons/linkedin-icon.svg'
+        />
+        <SvgLink href="mailto:tonytang.dev@gmail.com" SVGPath='/icons/email-icon.svg' />
+      </ContactLinks>
+    </StyledNavbar>
+  );
 };
 
 export default Navbar;
